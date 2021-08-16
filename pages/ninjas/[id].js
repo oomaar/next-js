@@ -35,4 +35,4 @@ const Ninja = ({ ninja }) => {
     );
 };
 
-export default Ninja;
+export default Ninja
