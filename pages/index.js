@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import HeadTag from '../global/HeadTag';
 import styles from "../styles/Home.module.css";
+// https://github.com/iamshaunjp/nextjs-tutorial
 
 export default function Home() {
   return (

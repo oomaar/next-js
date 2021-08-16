@@ -2,17 +2,6 @@ import Link from "next/link";
 import HeadTag from "../../global/HeadTag";
 import styles from "../../styles/Ninjas.module.css";
 
-export const getServerSideProps = async (context) => {
-    const res = await fetch(`https://fakestoreapi.com/products`);
-    const data = await res.json();
-
-    return {
-        props: {
-            ninjas: data
-        }
-    };
-};
-
 const Ninjas = ({ ninjas }) => {
     return (
         <div>
@@ -29,4 +18,15 @@ const Ninjas = ({ ninjas }) => {
     );
 };
 
-export default Ninjas
+export default Ninjas;
+
+export const getServerSideProps = async (context) => {
+    const res = await fetch(`https://fakestoreapi.com/products`);
+    const data = await res.json();
+
+    return {
+        props: {
+            ninjas: data
+        }
+    };
+};
