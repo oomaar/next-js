@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
@@ -10,11 +11,26 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>HomePage</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, vel saepe quaerat laudantium numquam reprehenderit explicabo! Qui doloremque quasi voluptate?</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, vel saepe quaerat laudantium numquam reprehenderit explicabo! Qui doloremque quasi voluptate?</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, vel saepe quaerat laudantium numquam reprehenderit explicabo! Qui doloremque quasi voluptate?</p>
-      <Link href="/ninjas"><a>See Ninja Listing</a></Link>
+      <h1 className={styles.title}>HomePage</h1>
+
+      <p className={styles.text}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Autem, vel saepe quaerat laudantium numquam reprehenderit explicabo!
+      </p>
+      <p className={styles.text}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Autem, vel saepe quaerat laudantium numquam reprehenderit explicabo!
+      </p>
+      <p className={styles.text}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Autem, vel saepe quaerat laudantium numquam reprehenderit explicabo!
+      </p>
+
+      <Link href="/ninjas">
+        <a className={styles.btn}>
+          See Ninja Listing
+        </a>
+      </Link>
     </div>
-  )
-}
+  );
+};
