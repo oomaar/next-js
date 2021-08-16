@@ -2,7 +2,7 @@ import Link from "next/link";
 import HeadTag from "../../global/HeadTag";
 import styles from "../../styles/Ninjas.module.css";
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async (context) => {
     const res = await fetch(`https://fakestoreapi.com/products`);
     const data = await res.json();
 
